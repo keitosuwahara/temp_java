@@ -1,3 +1,4 @@
+package App;
 
 public class Culc {
 public static int tasu(int x, int y) {
