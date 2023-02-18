@@ -1,21 +1,15 @@
 package RPG;
 
-public class Hero {
-    String name;
+public class Hero implements Cloneable{// 一こでも抽象メソッドがあるとクラスにもabstractをつけねばならないju
     int hp;
-    Sword sword;
+    String name;
+
+    public Hero clone() {
+        Hero result = new Hero();
+        result .name = this.name;
+        result.hp = this.hp;
+        return result;
+    }
 
 
-void Sleep() {
-    this.hp = 100;
-    System.out.println(this.name+"は眠って回復した");
-}
-void Sit(int sec) {
-    this.hp += sec;
-    System.out.println(this.name+"は"+sec+"秒座った");
-    System.out.println("HPが"+sec+"ポイント回復した");
-}
-Hero(String name) {
-    this.name = name;
-}
 }
